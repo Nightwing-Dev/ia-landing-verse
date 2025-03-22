@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Brain, BarChart3, Zap, Shield, RefreshCw, Globe } from "lucide-react";
+import { Shield, BarChart3, AlertCircle, User, Info, Settings } from "lucide-react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -15,11 +15,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, del
       className="glass-card rounded-xl p-6 hover:shadow-lg transition-all duration-300 animate-fade-in"
       style={{ animationDelay: delay }}
     >
-      <div className="bg-ia-accent/10 w-12 h-12 rounded-lg flex items-center justify-center text-ia-accent mb-6">
+      <div className="bg-teal-100 w-12 h-12 rounded-lg flex items-center justify-center text-teal-600 mb-6">
         {icon}
       </div>
       <h3 className="text-xl font-medium mb-3">{title}</h3>
-      <p className="text-ia-neutral">{description}</p>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 };
@@ -27,45 +27,45 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, del
 const FeaturesSection: React.FC = () => {
   const features = [
     {
-      icon: <Brain size={24} />,
-      title: "AI-Powered Insights",
-      description: "Leverage machine learning algorithms to extract valuable insights from your business data."
+      icon: <Shield size={24} />,
+      title: "Comprehensive Protection",
+      description: "Secure your business with our complete suite of financial protection solutions."
     },
     {
       icon: <BarChart3 size={24} />,
-      title: "Advanced Analytics",
-      description: "Transform raw data into actionable intelligence with our powerful analytics platform."
+      title: "Risk Analytics",
+      description: "Make informed decisions with our powerful risk assessment and analytics tools."
     },
     {
-      icon: <Zap size={24} />,
-      title: "Process Automation",
-      description: "Streamline operations and eliminate manual tasks with intelligent workflow automation."
+      icon: <AlertCircle size={24} />,
+      title: "Fraud Prevention",
+      description: "Detect and prevent fraudulent activities before they impact your business."
     },
     {
-      icon: <Shield size={24} />,
-      title: "Enterprise Security",
-      description: "Protect your data with enterprise-grade security protocols and compliance measures."
+      icon: <User size={24} />,
+      title: "Personalized Solutions",
+      description: "Custom protection plans tailored to your business's specific needs and industry."
     },
     {
-      icon: <RefreshCw size={24} />,
-      title: "Seamless Integration",
-      description: "Connect with your existing systems and applications without disrupting operations."
+      icon: <Info size={24} />,
+      title: "Expert Guidance",
+      description: "Get strategic advice from our team of financial protection specialists."
     },
     {
-      icon: <Globe size={24} />,
-      title: "Global Scalability",
-      description: "Scale your automation initiatives across departments, regions, and business units."
+      icon: <Settings size={24} />,
+      title: "Easy Integration",
+      description: "Seamlessly integrate our solutions with your existing financial systems."
     }
   ];
 
   return (
-    <section id="solutions" className="section-padding bg-ia-light">
+    <section id="solutions" className="section-padding bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title animate-fade-in">Intelligent Solutions for Modern Enterprises</h2>
+          <h2 className="section-title animate-fade-in">Financial Protection Solutions</h2>
           <p className="section-subtitle mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Our comprehensive suite of automation tools helps businesses streamline processes, 
-            reduce costs, and accelerate digital transformation.
+            Our comprehensive suite of tools helps businesses safeguard their finances, 
+            prevent fraud, and secure their financial future.
           </p>
         </div>
         
