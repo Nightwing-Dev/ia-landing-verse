@@ -82,7 +82,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['SF Pro Display', 'Inter', 'sans-serif']
+				display: ['Bebas Neue', 'Inter', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {

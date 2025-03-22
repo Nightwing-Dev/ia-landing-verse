@@ -8,31 +8,31 @@ interface Testimonial {
   content: string;
   author: string;
   role: string;
-  company: string;
+  achievement: string;
   image: string;
 }
 
 const TestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      content: "IA Business has revolutionized our approach to data processing. We've seen a 40% reduction in operational costs and significantly improved decision-making capabilities.",
+      content: "Since joining IRON PULSE, I've lost 30 pounds and gained so much confidence. The trainers are incredible and the community keeps me motivated every day.",
       author: "Sarah Johnson",
-      role: "CTO",
-      company: "TechSolutions Inc.",
+      role: "Member",
+      achievement: "Lost 30 lbs in 6 months",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80"
     },
     {
-      content: "The automation solutions provided by IA Business have transformed our customer service department. Response times are down 70% and customer satisfaction is at an all-time high.",
+      content: "As a busy professional, I needed a gym with flexible hours and efficient workouts. IRON PULSE delivered on both, plus their trainers know exactly how to push me to my limits.",
       author: "Michael Chen",
-      role: "Director of Operations",
-      company: "Global Services Ltd.",
+      role: "Member",
+      achievement: "Gained 15 lbs of muscle",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80"
     },
     {
-      content: "Implementing IA Business's AI-powered analytics platform gave us insights we never thought possible. Our strategic decisions are now backed by reliable data and predictive models.",
+      content: "The group classes at IRON PULSE completely changed my fitness routine. The energy is amazing, and I've made great friends while getting in the best shape of my life.",
       author: "Emma Rodriguez",
-      role: "Data Science Lead",
-      company: "Innovative Analytics",
+      role: "Member",
+      achievement: "Completed first marathon",
       image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=150&h=150&q=80"
     }
   ];
@@ -64,12 +64,12 @@ const TestimonialsSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="section-padding bg-ia-dark text-white">
+    <section id="testimonials" className="section-padding bg-indigo-900 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title text-white animate-fade-in">What Our Clients Say</h2>
-          <p className="section-subtitle text-ia-neutral mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Discover how businesses across industries have transformed their operations with our intelligent automation solutions.
+          <h2 className="section-title text-white animate-fade-in">Success Stories</h2>
+          <p className="section-subtitle text-indigo-200 mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            Hear from our members who have transformed their bodies and lives with IRON PULSE.
           </p>
         </div>
         
@@ -93,7 +93,7 @@ const TestimonialsSection: React.FC = () => {
                   className="w-full flex-shrink-0 px-4"
                 >
                   <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 md:p-10 border border-white/5">
-                    <Quote className="text-ia-accent mb-6 h-10 w-10 opacity-80" />
+                    <Quote className="text-indigo-400 mb-6 h-10 w-10 opacity-80" />
                     <p className="text-xl mb-8">{testimonial.content}</p>
                     
                     <div className="flex items-center">
@@ -104,7 +104,7 @@ const TestimonialsSection: React.FC = () => {
                       />
                       <div>
                         <h4 className="font-medium">{testimonial.author}</h4>
-                        <p className="text-ia-neutral text-sm">{testimonial.role}, {testimonial.company}</p>
+                        <p className="text-indigo-300 text-sm">{testimonial.achievement}</p>
                       </div>
                     </div>
                   </div>
@@ -125,7 +125,7 @@ const TestimonialsSection: React.FC = () => {
                 }}
                 className={cn(
                   "w-3 h-3 rounded-full transition-all duration-300",
-                  index === current ? "bg-ia-accent" : "bg-white/20 hover:bg-white/30"
+                  index === current ? "bg-indigo-400" : "bg-white/20 hover:bg-white/30"
                 )}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

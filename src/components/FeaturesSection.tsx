@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, BarChart3, AlertCircle, User, Info, Settings } from "lucide-react";
+import { Dumbbell, Heart, Zap, Users, Clock, Award } from "lucide-react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -15,7 +15,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, del
       className="glass-card rounded-xl p-6 hover:shadow-lg transition-all duration-300 animate-fade-in"
       style={{ animationDelay: delay }}
     >
-      <div className="bg-teal-100 w-12 h-12 rounded-lg flex items-center justify-center text-teal-600 mb-6">
+      <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 mb-6">
         {icon}
       </div>
       <h3 className="text-xl font-medium mb-3">{title}</h3>
@@ -27,45 +27,45 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, del
 const FeaturesSection: React.FC = () => {
   const features = [
     {
-      icon: <Shield size={24} />,
-      title: "Comprehensive Protection",
-      description: "Secure your business with our complete suite of financial protection solutions."
+      icon: <Dumbbell size={24} />,
+      title: "Premium Equipment",
+      description: "State-of-the-art workout machines and free weights for every fitness level."
     },
     {
-      icon: <BarChart3 size={24} />,
-      title: "Risk Analytics",
-      description: "Make informed decisions with our powerful risk assessment and analytics tools."
+      icon: <Heart size={24} />,
+      title: "Personal Training",
+      description: "Expert trainers create customized workout plans tailored to your goals."
     },
     {
-      icon: <AlertCircle size={24} />,
-      title: "Fraud Prevention",
-      description: "Detect and prevent fraudulent activities before they impact your business."
+      icon: <Users size={24} />,
+      title: "Group Classes",
+      description: "Energizing classes including HIIT, yoga, cycling, and more to keep you motivated."
     },
     {
-      icon: <User size={24} />,
-      title: "Personalized Solutions",
-      description: "Custom protection plans tailored to your business's specific needs and industry."
+      icon: <Clock size={24} />,
+      title: "24/7 Access",
+      description: "Work out on your schedule with round-the-clock facility access for members."
     },
     {
-      icon: <Info size={24} />,
-      title: "Expert Guidance",
-      description: "Get strategic advice from our team of financial protection specialists."
+      icon: <Zap size={24} />,
+      title: "Recovery Zone",
+      description: "Dedicated recovery areas with foam rollers, stretching equipment, and saunas."
     },
     {
-      icon: <Settings size={24} />,
-      title: "Easy Integration",
-      description: "Seamlessly integrate our solutions with your existing financial systems."
+      icon: <Award size={24} />,
+      title: "Nutrition Coaching",
+      description: "Expert nutrition guidance to maximize your results inside and outside the gym."
     }
   ];
 
   return (
-    <section id="solutions" className="section-padding bg-gray-50">
+    <section id="facilities" className="section-padding bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="section-title animate-fade-in">Financial Protection Solutions</h2>
+          <h2 className="section-title animate-fade-in">World-Class Facilities</h2>
           <p className="section-subtitle mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Our comprehensive suite of tools helps businesses safeguard their finances, 
-            prevent fraud, and secure their financial future.
+            Our comprehensive suite of equipment and services helps you achieve your fitness goals,
+            whether you're just starting or taking your fitness to the next level.
           </p>
         </div>
         
