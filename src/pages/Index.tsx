@@ -3,11 +3,11 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
-import FeaturesSection from '@/components/FeaturesSection';
-import BenefitsSection from '@/components/BenefitsSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import AboutSection from '@/components/AboutSection';
+import ProcessSection from '@/components/ProcessSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
-import CTASection from '@/components/CTASection';
 
 const Index = () => {
   return (
@@ -15,11 +15,11 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <FeaturesSection />
-        <BenefitsSection />
+        <ProjectsSection />
+        <AboutSection />
+        <ProcessSection />
         <TestimonialsSection />
         <ContactSection />
-        <CTASection />
       </main>
       <Footer />
     </div>

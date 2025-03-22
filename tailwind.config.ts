@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,6 +28,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				portfolio: {
+					primary: '#222222',
+					accent: '#FF5A5F',
+					light: '#F7F7F7',
+					neutral: '#767676',
+					muted: '#DDDDDD'
+				},
 				ia: {
 					light: '#F6F6F7',
 					dark: '#1A1F2C',
@@ -82,7 +88,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['Bebas Neue', 'Inter', 'sans-serif']
+				display: ['Playfair Display', 'serif']
 			},
 			keyframes: {
 				'accordion-down': {
@@ -97,9 +103,9 @@ export default {
 					'0%': { opacity: '0', transform: 'translateY(20px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
-				'fade-out': {
-					'0%': { opacity: '1', transform: 'translateY(0)' },
-					'100%': { opacity: '0', transform: 'translateY(20px)' }
+				'fade-in-fast': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
 				'slide-in': {
 					'0%': { transform: 'translateX(-20px)', opacity: '0' },
@@ -126,7 +132,7 @@ export default {
 				'accordion-down': 'accordion-down 0.3s ease-out',
 				'accordion-up': 'accordion-up 0.3s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'fade-in-fast': 'fade-in 0.3s ease-out',
+				'fade-in-fast': 'fade-in-fast 0.3s ease-out',
 				'slide-in': 'slide-in 0.4s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
 				'float': 'float 6s ease-in-out infinite',

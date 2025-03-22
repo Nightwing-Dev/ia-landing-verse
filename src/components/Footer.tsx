@@ -1,82 +1,39 @@
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Facebook, Twitter, Linkedin, Instagram, Send } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <footer className="bg-ia-dark text-white pt-20 pb-10">
+    <footer className="bg-portfolio-primary text-white py-12">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
-            <h3 className="font-display font-bold text-xl mb-6">IA Business</h3>
-            <p className="text-ia-neutral mb-6 max-w-xs">
-              Transforming businesses with intelligent automation solutions designed for the modern enterprise.
+            <h3 className="font-display font-bold text-xl mb-2">Diego Ferro</h3>
+            <p className="text-portfolio-neutral text-sm">
+              &copy; {new Date().getFullYear()} All rights reserved
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-ia-neutral hover:text-ia-accent transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-ia-neutral hover:text-ia-accent transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-ia-neutral hover:text-ia-accent transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-ia-neutral hover:text-ia-accent transition-colors">
-                <Instagram size={20} />
-              </a>
-            </div>
           </div>
           
-          <div>
-            <h3 className="font-medium text-lg mb-6">Solutions</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">Process Automation</a></li>
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">AI Integration</a></li>
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">Data Analytics</a></li>
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">Cloud Migration</a></li>
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">Enterprise Solutions</a></li>
-            </ul>
+          <div className="flex items-center space-x-8 mt-6 md:mt-0">
+            <a href="#projects" className="text-portfolio-neutral hover:text-white transition-colors text-sm">Projects</a>
+            <a href="#about" className="text-portfolio-neutral hover:text-white transition-colors text-sm">About</a>
+            <a href="#process" className="text-portfolio-neutral hover:text-white transition-colors text-sm">Process</a>
+            <a href="#contact" className="text-portfolio-neutral hover:text-white transition-colors text-sm">Contact</a>
           </div>
           
-          <div>
-            <h3 className="font-medium text-lg mb-6">Company</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">Press Kit</a></li>
-              <li><a href="#" className="text-ia-neutral hover:text-white transition-colors">Contact</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-medium text-lg mb-6">Stay Updated</h3>
-            <p className="text-ia-neutral mb-4">Subscribe to our newsletter for the latest updates.</p>
-            <div className="flex">
-              <Input 
-                type="email" 
-                placeholder="Your email" 
-                className="rounded-r-none bg-white/10 border-white/10 text-white placeholder:text-ia-neutral"
-              />
-              <Button className="rounded-l-none bg-ia-accent hover:bg-ia-accent/90">
-                <Send size={16} />
-              </Button>
-            </div>
-          </div>
-        </div>
-        
-        <div className="border-t border-white/10 pt-8 mt-8 text-ia-neutral">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; {new Date().getFullYear()} IA Business SAS. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">Terms</a>
-              <a href="#" className="hover:text-white transition-colors">Privacy</a>
-              <a href="#" className="hover:text-white transition-colors">Cookies</a>
-            </div>
-          </div>
+          <button 
+            onClick={scrollToTop}
+            className="mt-6 md:mt-0 w-10 h-10 rounded-full bg-portfolio-accent flex items-center justify-center hover:bg-portfolio-accent/90 transition-colors"
+          >
+            <ArrowUp className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </footer>
