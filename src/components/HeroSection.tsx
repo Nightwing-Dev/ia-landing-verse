@@ -6,20 +6,20 @@ import { ArrowRight } from "lucide-react";
 const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center">
-      {/* Full-width background image */}
+      {/* Full-width background image - changed to a cleaner person-focused image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-portfolio-primary/80 to-black/40 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1519211975560-4ca611f5a72a?auto=format&fit=crop&w=2000&q=80" 
-          alt="Design Studio" 
+          src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=2000&q=80" 
+          alt="Design Professional" 
           className="w-full h-full object-cover"
         />
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-20 pt-16 md:pt-0">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-8 backdrop-blur-sm animate-fade-in-fast">
-            <span className="flex h-2 w-2 rounded-full bg-portfolio-accent mr-2"></span>
+        <div className="max-w-3xl bg-portfolio-primary/10 backdrop-blur-sm p-8 rounded-xl">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-portfolio-accent text-white text-sm font-medium mb-8 shadow-lg animate-fade-in-fast">
+            <span className="flex h-2 w-2 rounded-full bg-white mr-2"></span>
             UI/UX Designer based in Colombia
           </div>
           
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
             <Button size="lg" className="bg-portfolio-accent hover:bg-portfolio-accent/90 text-white btn-hover-effect">
               View Projects <ArrowRight className="ml-1 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white/30 text-white backdrop-blur-sm hover:bg-white/10 btn-hover-effect">
+            <Button size="lg" variant="outline" className="border-white text-white backdrop-blur-sm hover:bg-white/10 btn-hover-effect">
               About Me
             </Button>
           </div>
