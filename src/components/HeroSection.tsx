@@ -6,18 +6,18 @@ import { ArrowRight } from "lucide-react";
 const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center">
-      {/* Full-width background image - changed to a cleaner person-focused image */}
+      {/* Full-width background image - updated to a more modern, cleaner background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-portfolio-primary/80 to-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-portfolio-primary/90 to-black/60 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=2000&q=80" 
-          alt="Design Professional" 
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2000&q=80" 
+          alt="UI/UX Designer at work" 
           className="w-full h-full object-cover"
         />
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-20 pt-16 md:pt-0">
-        <div className="max-w-3xl bg-portfolio-primary/10 backdrop-blur-sm p-8 rounded-xl">
+        <div className="max-w-3xl bg-portfolio-primary/20 backdrop-blur-md p-8 rounded-xl border border-white/10">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-portfolio-accent text-white text-sm font-medium mb-8 shadow-lg animate-fade-in-fast">
             <span className="flex h-2 w-2 rounded-full bg-white mr-2"></span>
             UI/UX Designer based in Colombia
