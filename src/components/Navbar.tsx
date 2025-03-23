@@ -20,7 +20,9 @@ const Navbar: React.FC = () => {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled ? "glass-nav py-3" : "bg-transparent py-5"
+      isScrolled 
+        ? "backdrop-blur-xl bg-white/80 border-b border-white/10 shadow-sm py-3" 
+        : "bg-transparent py-5"
     )}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
@@ -58,7 +60,7 @@ const Navbar: React.FC = () => {
       
       {/* Mobile Menu */}
       <div className={cn(
-        "fixed inset-0 bg-white z-40 pt-20 px-4 transition-all duration-300 ease-out-expo md:hidden",
+        "fixed inset-0 backdrop-blur-xl bg-white/90 z-40 pt-20 px-4 transition-all duration-300 ease-out-expo md:hidden",
         isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       )}>
         <nav className="flex flex-col space-y-6 py-8">
