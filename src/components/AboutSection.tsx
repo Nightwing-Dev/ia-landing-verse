@@ -5,10 +5,10 @@ import { Download } from "lucide-react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-20 md:py-28 bg-white">
+    <section id="about" className="py-20 md:py-28 bg-gradient-to-br from-white to-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 backdrop-blur-md bg-white/50 p-8 rounded-xl border border-white/30 shadow-sm">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-portfolio-accent/10 text-portfolio-accent text-sm font-medium mb-6">
               About Me
             </div>
@@ -26,36 +26,38 @@ const AboutSection: React.FC = () => {
             </p>
             
             <div className="grid grid-cols-2 gap-6 mb-8">
-              <div>
+              <div className="backdrop-blur-sm bg-white/30 p-4 rounded-lg border border-white/20">
                 <h3 className="font-semibold mb-2 text-portfolio-primary">Education</h3>
                 <p className="text-portfolio-neutral">Master's in Interaction Design<br />Universidad de Los Andes</p>
               </div>
-              <div>
+              <div className="backdrop-blur-sm bg-white/30 p-4 rounded-lg border border-white/20">
                 <h3 className="font-semibold mb-2 text-portfolio-primary">Experience</h3>
                 <p className="text-portfolio-neutral">7+ Years<br />Working with global clients</p>
               </div>
-              <div>
+              <div className="backdrop-blur-sm bg-white/30 p-4 rounded-lg border border-white/20">
                 <h3 className="font-semibold mb-2 text-portfolio-primary">Expertise</h3>
                 <p className="text-portfolio-neutral">UI/UX Design<br />Design Systems, User Research</p>
               </div>
-              <div>
+              <div className="backdrop-blur-sm bg-white/30 p-4 rounded-lg border border-white/20">
                 <h3 className="font-semibold mb-2 text-portfolio-primary">Tools</h3>
                 <p className="text-portfolio-neutral">Figma, Adobe Suite<br />Sketch, Principle</p>
               </div>
             </div>
             
-            <Button className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-white btn-hover-effect">
+            <Button className="bg-portfolio-primary/90 backdrop-blur-sm hover:bg-portfolio-primary text-white btn-hover-effect">
               Download Resume <Download className="ml-1 h-4 w-4" />
             </Button>
           </div>
           
           <div className="order-1 lg:order-2 relative">
             <div className="absolute -top-8 -right-8 bottom-8 left-8 bg-portfolio-accent/10 rounded-xl"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&q=80" 
-              alt="Diego Ferro" 
-              className="relative z-10 w-full h-auto object-cover rounded-xl shadow-lg"
-            />
+            <div className="relative z-10 backdrop-blur-sm bg-white/10 p-2 rounded-xl border border-white/30 shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&q=80" 
+                alt="Diego Ferro" 
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>

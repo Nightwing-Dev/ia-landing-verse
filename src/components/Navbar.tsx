@@ -21,8 +21,8 @@ const Navbar: React.FC = () => {
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       isScrolled 
-        ? "backdrop-blur-xl bg-white/80 border-b border-white/10 shadow-sm py-3" 
-        : "bg-transparent py-5"
+        ? "backdrop-blur-xl bg-white/30 border-b border-white/20 shadow-sm py-3" 
+        : "bg-transparent backdrop-blur-sm bg-white/10 py-5"
     )}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
@@ -41,10 +41,10 @@ const Navbar: React.FC = () => {
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-portfolio-muted text-portfolio-primary btn-hover-effect">
+            <Button variant="outline" className="border-white/30 bg-white/20 backdrop-blur-md text-portfolio-primary btn-hover-effect">
               Resume
             </Button>
-            <Button className="bg-portfolio-accent hover:bg-portfolio-accent/90 text-white btn-hover-effect">
+            <Button className="bg-portfolio-accent/90 backdrop-blur-sm hover:bg-portfolio-accent text-white btn-hover-effect">
               Get in Touch <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </div>
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
       
       {/* Mobile Menu */}
       <div className={cn(
-        "fixed inset-0 backdrop-blur-xl bg-white/90 z-40 pt-20 px-4 transition-all duration-300 ease-out-expo md:hidden",
+        "fixed inset-0 backdrop-blur-xl bg-white/70 z-40 pt-20 px-4 transition-all duration-300 ease-out-expo md:hidden",
         isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       )}>
         <nav className="flex flex-col space-y-6 py-8">
@@ -101,10 +101,10 @@ const Navbar: React.FC = () => {
           </a>
           
           <div className="flex flex-col space-y-4 pt-4">
-            <Button variant="outline" className="w-full justify-center border-portfolio-muted text-portfolio-primary">
+            <Button variant="outline" className="w-full justify-center bg-white/40 backdrop-blur-md border-white/30 text-portfolio-primary">
               Resume
             </Button>
-            <Button className="w-full justify-center bg-portfolio-accent hover:bg-portfolio-accent/90 text-white">
+            <Button className="w-full justify-center bg-portfolio-accent/90 backdrop-blur-sm hover:bg-portfolio-accent text-white">
               Get in Touch <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </div>

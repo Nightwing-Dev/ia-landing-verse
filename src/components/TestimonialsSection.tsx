@@ -64,9 +64,9 @@ const TestimonialsSection: React.FC = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="section-padding bg-indigo-900 text-white">
+    <section id="testimonials" className="section-padding bg-indigo-900 text-white bg-gradient-to-br from-indigo-900 to-indigo-800">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 backdrop-blur-lg bg-white/10 p-8 rounded-xl border border-white/10 shadow-md">
           <h2 className="section-title text-white animate-fade-in">Success Stories</h2>
           <p className="section-subtitle text-indigo-200 mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Hear from our members who have transformed their bodies and lives with IRON PULSE.
@@ -92,15 +92,15 @@ const TestimonialsSection: React.FC = () => {
                   key={index} 
                   className="w-full flex-shrink-0 px-4"
                 >
-                  <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 md:p-10 border border-white/5">
+                  <div className="backdrop-blur-2xl bg-white/10 rounded-xl p-8 md:p-10 border border-white/10 shadow-lg">
                     <Quote className="text-indigo-400 mb-6 h-10 w-10 opacity-80" />
                     <p className="text-xl mb-8">{testimonial.content}</p>
                     
-                    <div className="flex items-center">
+                    <div className="flex items-center backdrop-blur-md bg-white/5 p-3 rounded-lg border border-white/10">
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.author}
-                        className="w-12 h-12 rounded-full object-cover mr-4"
+                        className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-white/20"
                       />
                       <div>
                         <h4 className="font-medium">{testimonial.author}</h4>
@@ -137,7 +137,7 @@ const TestimonialsSection: React.FC = () => {
               variant="ghost"
               size="icon"
               onClick={prev}
-              className="text-white bg-white/10 hover:bg-white/20 rounded-full p-3 pointer-events-auto"
+              className="text-white backdrop-blur-md bg-white/10 hover:bg-white/20 rounded-full p-3 pointer-events-auto border border-white/10"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={24} />
@@ -147,7 +147,7 @@ const TestimonialsSection: React.FC = () => {
               variant="ghost"
               size="icon"
               onClick={next}
-              className="text-white bg-white/10 hover:bg-white/20 rounded-full p-3 pointer-events-auto"
+              className="text-white backdrop-blur-md bg-white/10 hover:bg-white/20 rounded-full p-3 pointer-events-auto border border-white/10"
               aria-label="Next testimonial"
             >
               <ChevronRight size={24} />

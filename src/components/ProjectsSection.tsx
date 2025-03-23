@@ -29,10 +29,10 @@ const ProjectsSection: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 md:py-28 bg-portfolio-light">
+    <section id="projects" className="py-20 md:py-28 bg-gradient-to-b from-portfolio-light/80 to-white/90">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-portfolio-accent/10 text-portfolio-accent text-sm font-medium mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-16 p-8 backdrop-blur-sm bg-white/40 rounded-xl border border-white/20 shadow-sm">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-portfolio-accent/10 text-portfolio-accent text-sm font-medium mb-4 backdrop-blur-sm">
             Selected Work
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold leading-tight mb-6">
@@ -47,7 +47,7 @@ const ProjectsSection: React.FC = () => {
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+              className="group backdrop-blur-md bg-white/60 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-white/30"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -56,7 +56,7 @@ const ProjectsSection: React.FC = () => {
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6">
+                  <div className="p-6 backdrop-blur-sm bg-black/20 w-full">
                     <span className="text-white text-sm font-medium">{project.category}</span>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const ProjectsSection: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-12">
-          <Button variant="outline" className="border-portfolio-muted text-portfolio-primary btn-hover-effect">
+          <Button variant="outline" className="border-white/30 bg-white/30 backdrop-blur-md text-portfolio-primary btn-hover-effect">
             View All Projects <ArrowRight className="ml-1 h-4 w-4" />
           </Button>
         </div>
